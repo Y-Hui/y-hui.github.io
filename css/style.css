@@ -21,7 +21,6 @@ li {
 .banner-title {
   color: #fff;
   font-weight: normal;
-  text-transform: capitalize;
 }
 .container-title {
   display: block;
@@ -31,32 +30,23 @@ li {
 /* 带下划线的 h2 标题，位于 banner 下方 */
 }
 .content-item {
-  padding: 16px 20px;
   margin: 20px auto 0 auto;
   background: #fff;
   border-radius: 3px;
-  box-shadow: 0 1px 7px #ccc;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.1);
+  cursor: pointer;
 /* 内容卡片，位于 banner 下方的卡片、项目的卡片 */
 }
 .content-img {
-  float: left;
-  width: 300px;
-  height: 100%;
-  margin-right: 45px;
-  border-radius: 3px;
-  background: #c7c7c7;
+  width: 100%;
+  background: url("../images/Minimalist design.jpg") 50% 50% no-repeat;
+  background-size: cover;
   overflow: hidden;
 /* 内容卡片中的图片容器 */
 }
-.content-img img {
-  width: 100%;
-/* 图片容器中的图片 */
-}
 .content-text {
   margin: 0;
-  padding: 0;
-  height: 100%;
-  max-height: 170px;
+  padding: 16px 20px;
   text-overflow: ellipsis;
   overflow: hidden;
 /* 内容卡片中的文字容器 */
@@ -70,15 +60,22 @@ li {
 .content-title:hover {
   text-decoration: underline;
 }
-.content-text p {
-  color: #262626;
-  padding-right: 45px;
-  margin-top: 12px;
+.content-text p,
+.content-text .read-btn {
   font-size: 18px;
+}
+.content-text p {
+  display: inline-block;
+  color: #262626;
+  margin-top: 12px;
   text-align: justify; /* 两端对齐 */
-  line-height: 1.5;
+  line-height: 1.67;
   text-overflow: ellipsis;
 /* 内容卡片中的正文 */
+}
+.content-text .read-btn {
+  color: #0085ee;
+  text-decoration: underline;
 }
 /* nav 背景即时模糊，适用于 Safari */
 @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
@@ -139,7 +136,6 @@ li {
   position: fixed;
   right: 0;
   left: 0;
-/*border-bottom: 1px solid rgba(0, 0, 0, 0.08);*/
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 .nav .logo {
@@ -221,13 +217,6 @@ li {
   .about-me span {
     font-size: 16px;
   }
-  .content .content-item {
-    height: 95px;
-    padding: 10px;
-  }
-  .content .content-img {
-    width: 95px;
-  }
   .content .content-title {
     font-size: 1.4em;
   }
@@ -263,18 +252,17 @@ li {
   .container-title {
     font-size: 30px;
   }
-  .content-item {
-    height: 122px;
-    padding: 14px 14px;
-  }
   .content-img {
-    width: 120px; /* 内容卡片-图片容器宽度 */
-    margin-right: 16px;
+    height: 160px;
+/* 内容卡片-图片容器宽度 */
   }
-  .content-text p {
-    padding-right: 18px;
-    margin-top: 9px;
+  .content-text p,
+  .content-text .read-btn {
+    display: block;
     font-size: 16px;
+  }
+  .content-text .read-btn {
+    text-align: right;
   }
   .content-title {
     font-size: 1.5em;
@@ -324,13 +312,29 @@ li {
     line-height: 70px;
     border-bottom: 1px solid #d4d4d4;
   }
-  .content-item {
-    width: 710px;
-    height: 208px;
-  }
   .content-img {
-    width: 300px;
-/* 内容卡片-图片容器宽度 */
+    height: 160px;
+/* 内容卡片-图片容器高度 */
+  }
+  .content-text {
+    padding: 16px 10px;
+  }
+  .content-text p,
+  .content-text .read-btn {
+    font-size: 16px;
+  }
+  .lately {
+    padding: 55px 0 55px 0;
+  }
+  .project {
+    padding: 85px 0 55px 0;
+  }
+  .about {
+    padding: 55px 0;
+  }
+  .footer .content {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 @media (min-width: 992px) {
@@ -341,8 +345,13 @@ li {
     width: 950px;
   }
   .content-item {
-/*width: 950px;*/
-    width: 910px;
+    width: 950px;
+  }
+  .content-img {
+    height: 228px;
+  }
+  .content-text {
+    padding: 16px 20px;
   }
   .about-page span,
   .about-me span {
@@ -361,15 +370,9 @@ li {
     text-indent: 2px;
   }
 }
-.lately {
-  padding: 55px 0 55px 0;
-}
 .lately,
 .project {
   background-color: #f9f9f9;
-}
-.project {
-  padding: 85px 0 55px 0;
 }
 .project ul {
   width: 99%;
@@ -387,9 +390,6 @@ li {
 .project .active {
   color: #0085ee;
   border-bottom: 2px solid #0085ee;
-}
-.about {
-  padding: 55px 0;
 }
 .about a {
   color: #0085ee;
@@ -409,10 +409,6 @@ li {
 .footer {
   border-top: 1px solid #edf0f2;
   background-color: #fff;
-}
-.footer .content {
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 .footer p {
   color: #81848f;
