@@ -31,42 +31,12 @@ li {
   border-bottom: 1px solid #d4d4d4;
 /* 带下划线的 h2 标题，位于 banner 下方 */
 }
-/* nav 背景即时模糊，适用于 Safari */
-@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
-  .nav {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-  }
-  .nav-item .active {
-    background: rgba(238,238,238,0.5);
-  }
-  .overlay {
-    background-color: rgba(186,186,186,0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-  }
-  .overlay li {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-}
-/* nav 背景不支持即时模糊，则为白色 */
-@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
-  .nav {
-    background-color: #fff;
-  }
-  .overlay {
-    background-color: rgba(0,0,0,0.97);
-  }
-  .overlay li {
-    border-bottom: 1px solid #333;
-  }
-}
 .nav {
   position: fixed;
   right: 0;
   left: 0;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
 }
 .nav .logo {
   line-height: 55px;
@@ -80,6 +50,7 @@ li {
   position: fixed;
   width: 100%;
   height: 100%;
+  background-color: rgba(0,0,0,0.97);
 }
 .overlay ul {
   display: block;
@@ -89,6 +60,7 @@ li {
   display: block;
   margin: 20px auto 0 auto;
   padding-bottom: 5px;
+  border-bottom: 1px solid #333;
 }
 .overlay li a {
   color: #fff;
@@ -116,6 +88,24 @@ li {
   text-align: right;
   margin: 20px 0 20px 20px;
   padding-right: 10px;
+}
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  .nav {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .nav-item .active {
+    background: rgba(238,238,238,0.5);
+  }
+  .overlay {
+    background-color: rgba(186,186,186,0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .overlay li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
 }
 .home {
   text-align: center;

@@ -23,96 +23,94 @@ blockquote {
     border-left: 5px solid #eee;
 }
 
-.main-img-container blockquote > p{
-    margin: 5px 0;
-    color: #808080;
-}
-
-.main-img {
-    height: 320px;
-}
-
-.main-img-container{
-    height: 100%;
+.article-container {
+    padding: 0 15px;
     margin: 0 auto;
     padding-bottom: 30px;
 }
 
-.main-img-title {
-    padding: 240px 0 0 0;
-    line-height: 1.3;
-    font-weight: 600;
+.article-container h2{
+    font-weight: normal;
 }
 
-.main-img-container a{
+.article-container blockquote > p{
+    margin: 5px 0;
+    color: #808080;
+}
+
+.article-title {
+    padding: 240px 0 0 0;
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+.article-container a{
     color: #0085ee;
     text-decoration: underline;
 }
 
-.main-img-container p{
-    color: #333;
+.article-container p{
+    color: #555;
     margin: 20px 0;
     line-height: 1.7;
     text-align: justify;
 }
 
-.main-img-container h2{
+.article-container h2{
     margin: 2em 0 0.5em;
 }
 
-.main-img-container img{
+.article-container img{
+    width: 100%;
     display: block;
     margin: 35px auto;
     border-radius: 3px;
 }
 
-.details-date{
+.article-date{
     color: #b9b9b9;
     text-align: right;
 }
-@media (device-width: 320px) {
-    .main-img {
+
+@media (min-width: 320px) {
+    .article-img {
         height: 195px;
     }
 
-    .main-img-title {
+    .article-title {
         padding: 147px 0 0 0;
-    }
-
-    .main-img-title {
-        font-size: 28px !important;
-    }
-
-    .main-img-container {
-        width: 280px !important;
-    }
-    
-    .main-img-container img {
-        max-width: 280px !important;
+        font-size: 28px;
+        text-align: center;
     }
 }
 
-@media (max-width: 768px) {
-    .main-img-title {
+/* @media (max-width: 768px) {
+    .article-img-title {
         font-size: 34px;
         text-align: center;
     }
-    .main-img-container {
+    .article-img-container {
         width: 344px;
     }
-    .main-img-container img {
-        max-width: 344px;
-    }
-}
+} */
 
 @media (min-width: 768px) {
-    .main-img-title {
-        font-size: 38px;
+    .article-img {
+        height: 250px;
     }
-    .main-img-container {
+
+    .article-title {
+        font-size: 42px;
+        padding: 135px 0 0 0;
+        text-align: left;
+    }
+
+    .article-container {
+        width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .article-container {
         width: 830px;
-    }
-    .main-img-container img {
-        max-width: 830px;
     }
 }
