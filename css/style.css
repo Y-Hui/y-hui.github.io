@@ -24,6 +24,9 @@ li {
   font-weight: normal;
   text-transform: capitalize;
 }
+.content-wrap {
+  background: #f9f9f9;
+}
 .container-title {
   display: block;
   margin: 0 auto;
@@ -156,15 +159,14 @@ li {
     margin: 20px 0 0 20px;
     cursor: pointer;
   }
-  .lately,
-  .about {
+  .content-wrap {
     padding: 15px 0 20px 0;
   }
   .banner-logo {
     max-width: 35%;
   }
   .banner-title {
-    font-size: 58px;
+    font-size: 52px;
   }
   .design .container .design-title {
     font-size: 32px;
@@ -176,15 +178,15 @@ li {
     height: 160px;
 /* 内容卡片-图片容器宽度 */
   }
+  .content-title {
+    font-size: 1.5em;
+  }
   .content-text p,
   .content-text .read-btn {
     font-size: 16px;
   }
   .content-text .read-btn {
     text-align: right;
-  }
-  .content-title {
-    font-size: 1.5em;
   }
 }
 @media (min-width: 768px) {
@@ -231,6 +233,10 @@ li {
     line-height: 70px;
     border-bottom: 1px solid #d4d4d4;
   }
+  .content-title {
+    font-size: 32px;
+/* 内容卡片中的标题 */
+  }
   .content-img {
     height: 160px;
 /* 内容卡片-图片容器高度 */
@@ -242,17 +248,8 @@ li {
   .content-text blockquote {
     font-size: 18px;
   }
-  .lately {
+  .content-wrap {
     padding: 55px 0 55px 0;
-  }
-  .project {
-    padding: 85px 0 55px 0;
-  }
-  .design-content {
-    padding: 55px 0 55px 0;
-  }
-  .about {
-    padding: 55px 0;
   }
   .footer .content {
     padding-top: 40px;
@@ -330,7 +327,6 @@ li {
 .content-title {
   display: block;
   color: #2f2f2f;
-  font-size: 32px;
   text-overflow: ellipsis;
 /* 内容卡片中的标题 */
 }
