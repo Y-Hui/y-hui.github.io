@@ -20,16 +20,16 @@ $(function () {
 
 $(function () {
     // nav active
-    var oTitle = $(".banner-title").html()
-    if(oTitle == "project"){
+    var oTitle = $(".banner-title").html();
+    if(oTitle == "Project"){
         var oNav = $(".nav-item li:eq(1)");
         oNav.addClass("active");
     }
-    else if (oTitle == "design"){
+    else if (oTitle == "Design"){
         var oNav = $(".nav-item li:eq(2)");
         oNav.addClass("active");
     }
-    else if (oTitle == "about"){
+    else if (oTitle == "About"){
         var oNav = $(".nav-item li:eq(3)");
         oNav.addClass("active");
     }

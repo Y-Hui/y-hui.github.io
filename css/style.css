@@ -249,7 +249,7 @@ li {
     padding: 16px 10px;
   }
   .content-text p,
-  .content-text .read-btn {
+  .content-text blockquote {
     font-size: 18px;
   }
   .lately {
@@ -302,6 +302,16 @@ li {
     text-indent: 2px;
   }
 }
+.content-item blockquote {
+  color: #808080;
+  margin: 15px 0;
+  padding: 2px 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+.content-item blockquote p {
+  margin: 2px 0;
+}
 .content-item {
   margin: 20px auto 0 auto;
   background: #fff;
@@ -340,7 +350,7 @@ li {
 .content-text p {
   display: inline-block;
   color: #808080;
-  margin-top: 12px;
+  margin: 10px 0;
   text-align: justify; /* 两端对齐 */
   line-height: 1.67;
   text-overflow: ellipsis;
@@ -350,11 +360,14 @@ li {
   color: #0085ee;
   text-decoration: underline;
 }
-.content .btn {
+.content-btn {
   text-align: right;
 }
-.content .btn span {
+.content-btn span {
   color: #b9b9b9;
+}
+.content-btn .btn {
+  text-align: right;
 }
 .lately,
 .project {
@@ -386,6 +399,9 @@ li {
 .design-title {
   letter-spacing: 2px;
 }
+.about {
+  padding: 55px 0;
+}
 .about a {
   color: #0085ee;
   text-decoration: underline;
@@ -395,7 +411,6 @@ li {
   display: block;
   margin: 10px 0;
   font-size: 18px;
-  text-indent: 2px;
   color: #808080;
 }
 .about-me {
@@ -410,53 +425,4 @@ li {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
-}
-@charset "utf-8";
-* {
-  margin: 0;
-  padding: 0;
-}
-blockquote {
-  color: #808080;
-  font-style: italic;
-  margin: 20px 0 20px;
-  padding: 2px 20px;
-  font-size: 17.5px;
-  border-left: 5px solid #eee;
-}
-.main-img {
-  height: 320px;
-}
-.main-img-container {
-  width: 660px;
-  margin: 0 auto;
-  padding: 30px 0 50px;
-}
-.main-img-title {
-  position: absolute;
-  top: 250px;
-  font-size: 38px;
-  line-height: 1.3;
-  font-weight: 600;
-}
-.main-img-container a {
-  color: #0085ee;
-  text-decoration: underline;
-}
-.main-img-container p {
-  color: #333;
-  margin: 20px 0;
-  font-size: 18px;
-  line-height: 1.7;
-}
-.main-img-container h2 {
-  margin: 2em 0 0.5em;
-}
-.main-img-container img {
-  max-width: 660px;
-  border-radius: 3px;
-}
-.details-date {
-  color: #b9b9b9;
-  text-align: right;
 }
