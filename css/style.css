@@ -38,7 +38,7 @@ li {
   position: fixed;
   right: 0;
   left: 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px 0 rgba(0,34,77,0.1);
   background: #fff;
 }
 .nav .logo {
@@ -48,6 +48,15 @@ li {
 .nav .logo img {
   width: 42px;
   vertical-align: middle;
+}
+.nav .nav-item li a:hover {
+  color: #0085ee;
+}
+.nav-item .active {
+  background: rgba(148,148,148,0.3);
+}
+.nav-item .active a {
+  color: #0085ee !important;
 }
 .overlay {
   position: fixed;
@@ -99,7 +108,7 @@ li {
     -webkit-backdrop-filter: blur(20px);
   }
   .nav-item .active {
-    background: rgba(238,238,238,0.5);
+    background: rgba(148,148,148,0.13);
   }
   .overlay {
     background-color: rgba(186,186,186,0.7);
@@ -208,15 +217,6 @@ li {
     display: block;
     color: #000;
     font-size: 18px;
-  }
-  .nav .nav-item li a:hover {
-    color: #0085ee;
-  }
-  .nav-item .active {
-    background: #eee;
-  }
-  .nav-item .active a {
-    color: #0085ee !important;
   }
   .nav-btn {
     display: none;
