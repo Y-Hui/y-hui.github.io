@@ -223,6 +223,9 @@ li {
   .content-text .read-btn {
     text-align: right;
   }
+  .scroll-top {
+    right: 1em;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -332,7 +335,7 @@ li {
 }
 .content-img {
   width: 100%;
-  background: #eee;
+  background: url("../images/background.jpg") no-repeat;
   overflow: hidden;
 /* 内容卡片中的图片容器 */
 }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<!-- 添加 head 标签 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+        Y-Hui Blog
+    </title>
+    
+        <link rel="stylesheet" href="/css/details.css">
+            <style>
+                .article-img{
+                    background: url('css.jpg') 50% 23% no-repeat;
+                    background-size: cover;
+                }
+                .nav-btn path{
+                    fill: #fff;
+                }
+            </style>
+            
+                <link rel="stylesheet" href="/../css/style.css">
+                
+                    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+                  
+</head>
+
+    <body>
+        <div class="nav">
+    <div class="container">
+        <a href="/" class="logo">
+            <img src="/images/logo.png" alt="Y-Hui" ondragstart="return false">
+        </a>
+        <div class="nav-btn">
+            <span>
+                <svg width="20px" height="12px" viewBox="0 0 20 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M1,0 L19,0 C19.5522847,-1.01453063e-16 20,0.44771525 20,1 L20,1 C20,1.55228475 19.5522847,2 19,2 L1,2 C0.44771525,2 6.76353751e-17,1.55228475 0,1 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z M1,10 L19,10 C19.5522847,10 20,10.4477153 20,11 C20,11.5522847 19.5522847,12 19,12 L1,12 C0.44771525,12 6.76353751e-17,11.5522847 0,11 C-6.76353751e-17,10.4477153 0.44771525,10 1,10 L1,10 Z"
+                            id="Combined-Shape" fill="#000000"></path>
+                    </g>
+                </svg>
+            </span>
+        </div>
+        <div class="nav-item">
+            <ul>
+                
+                    <li>
+                        <a href="/ ">
+                                主页
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/project ">
+                                项目
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/design ">
+                                设计
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about ">
+                                关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="overlay overlay-hugeinc">
+    <div class="container">
+        <div class="overlay-btn">
+            <span>
+                <svg width="17px" height="17px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M6,5 L11.5,5 C11.7761424,5 12,5.22385763 12,5.5 C12,5.77614237 11.7761424,6 11.5,6 L6,6 L6,11.5 C6,11.7761424 5.77614237,12 5.5,12 C5.22385763,12 5,11.7761424 5,11.5 L5,6 L-0.5,6 C-0.776142375,6 -1,5.77614237 -1,5.5 C-1,5.22385763 -0.776142375,5 -0.5,5 L5,5 L5,-0.5 C5,-0.776142375 5.22385763,-1 5.5,-1 C5.77614237,-1 6,-0.776142375 6,-0.5 L6,5 Z"
+                            id="Combined-Shape" fill="#F9F9F9" transform="translate(5.500000, 5.500000) rotate(-315.000000) translate(-5.500000, -5.500000) "></path>
+                    </g>
+                </svg>
+            </span>
+        </div>
+        <ul>
+            
+                <li>
+                    <a href="/">主页</a>
+                </li>
+                
+                <li>
+                    <a href="/project">项目</a>
+                </li>
+                
+                <li>
+                    <a href="/design">设计</a>
+                </li>
+                
+                <li>
+                    <a href="/about">关于</a>
+                </li>
+                
+        </ul>
+    </div>
+</div>
+            
+
+                
+                            <div class="article-img">
+    <div class="article-container"></div>
+</div>
+
+<div class="article-container">
+    <h1 class="article-title">
+        CSS代码重构与优化
+    </h1>
+    <p>写 CSS 的同学们往往会体会到，随着项目规模的增加，项目中的CSS代码也会越来越多<a id="more"></a>，如果没有及时对 CSS 代码进行维护，CSS 代码不断会越来越多。<br>CSS 代码交错复杂，像一张庞大的蜘蛛网分布在网站的各个位置，你不知道修改这行代码会有什么影响，所以如果有修改或增加新功能时，开发人员往往不敢去删除旧的冗余的代码，而保险地增加新代码，最终的坏处就是项目中的 CSS 会越来越多，最终陷入无底洞。</p>
+<h2 id="CSS-代码重构的目的"><a href="#CSS-代码重构的目的" class="headerlink" title="CSS 代码重构的目的"></a>CSS 代码重构的目的</h2><p>我们写 CSS 代码时，不仅仅只是完成页面设计的效果，还应该让CSS代码易于管理，维护。我们对 CSS 代码重构主要有两个目的：</p>
+<p><strong>1、提高代码性能</strong><br><strong>2、提高代码的可维护性</strong></p>
+<h3 id="提高代码性能"><a href="#提高代码性能" class="headerlink" title="提高代码性能"></a>提高代码性能</h3><p>提高 CSS 代码性能主要有两个点：</p>
+<p><strong>1、提高页面的加载性能。</strong><br>提高页面的加载性能，简单说就是减小 CSS 文件的大小，提高页面的加载速度，尽可以的利用http缓存。</p>
+<p><strong>2、提高CSS代码性能。</strong><br>不同的 CSS 代码，浏览器对其解析的速度也是不一样的，如何提高浏览器解析CSS代码的速度也是我们要考虑的。</p>
+<h3 id="提高代码的可维护性"><a href="#提高代码的可维护性" class="headerlink" title="提高代码的可维护性"></a>提高代码的可维护性</h3><p>提高 CSS 代码的可维护性主要是体现在下面几点：</p>
+<p><strong>1、可重用性</strong><br>一般来说，一个项目的整体设计风格是一致的，页面中肯定有几个风格一致但有些许不同的模块，如何在尽可能多地重用 CSS 代码，尽可能少地增加新代码，这是 CSS 代码中非常重要的一点。如果 CSS 代码的重用性高，我们可能只需要写一些不一样的地方，对页面性能和可维护性、提高开发效率都有很大的帮助。</p>
+<p><strong>2、可扩展性</strong><br>如果产品增加了某个功能，我们应该保证新增加的 CSS 代码不会影响到旧的 CSS 代码和页面，并且尽可能少地增加新代码而重用旧代码。</p>
+<p><strong>3、可修改性</strong><br>如果某个模块产品经理觉得要修改样式，或者要删掉它，如果没有规划好相应的 CSS 代码，过了一段时间之后，开发人员可能已经不记得这段代码作用了几个地方，不敢修改或删除它，这样下去 CSS 代码也就越来越多，影响了页面的性能，还造成了代码的复杂度。</p>
+<h2 id="CSS-代码重构的基本方法"><a href="#CSS-代码重构的基本方法" class="headerlink" title="CSS 代码重构的基本方法"></a>CSS 代码重构的基本方法</h2><p>首先说说如何提高 CSS 性能，根据页面的加载性能和CSS代码性能，主要总结有下面几点：</p>
+<p><strong>1、尽量将样式写在单独的css文件里面，在head元素中引用</strong><br>有时候为了图方便或者快速搞定功能，我们可能会直接将样式写在页面的 style 标签或者直接内联在元素上，这样虽然简单方便，但是非常不利于日后的维护。将代码写成单独的 CSS 文件有几点好处：<br>（1）内容和样式分离，易于管理和维护。<br>（2）减少页面体积。<br>（3）CSS 文件可以被缓存、重用，维护成本降低。</p>
+<p><strong>2、不使用 @import。</strong><br>这条手段已经是众所周知，这里简单提一下，@import 影响 css 文件的加载速度。</p>
+<p><strong>3、避免使用复杂的选择器，层级越少越好</strong><br>有时候项目的模块越来越多，功能越来越复杂，我们写的 CSS 选择器会内套多层，越来越复杂。<br>建议选择器的嵌套最好不要超过三层。</p>
+<p>简洁的选择器不仅可以减少 CSS 文件大小，提高页面的加载性能，浏览器解析时也会更加高效，也会提高开发人员的开发效率，降低了维护成本。</p>
+<p><strong>4、精简页面的样式文件，去掉不用的样式</strong><br>很多时候，我们会把所有的样式文件合并成一个文件，但是这样有一个问题：很多其他页面的CSS同时引用到当前页面中，而当前页面并没有用到它们，这种情况会造成两个问题：</p>
+<p>（1）样式文件偏大，影响加载速度。<br>（2）浏览器会进行多余的样式匹配，影响渲染时间。</p>
+<p>正确的处理方法是根据当前页面需要的 CSS 去合并那些当前页面用到的 CSS 文件。</p>
+<p>PS：合并成一个文件有一个优点：样式文件会被浏览器缓存，进入到其他页面样式文件不用再去下载。这条规则应根据场景来区别对待，如果是大项目，应该合并成不同的样式文件，如果是简单的项目，建议合并成一个文件即可。如果无法确认项目规模，建议分开成不同的样式文件，日后要合并也比较方便。</p>
+<p><strong>5、利用 CSS 继承减少代码量</strong><br>我们知道有一部分 CSS 代码是可以继承的，如果父元素已经设置了该样式，子元素就不需要去设置该样式，这个也是提高性能的行之有效的方法。</p>
+<h2 id="提高可维护性的方法"><a href="#提高可维护性的方法" class="headerlink" title="提高可维护性的方法"></a>提高可维护性的方法</h2><p>提高 CSS 代码的可维护性，简单的说就是要让开发人员易于理解 CSS 代码，容易去修改它，不会破坏原有的功能。下面说说一些常用的手段。</p>
+<p><strong>1、命名与备注</strong><br>命名是提高代码可读性的第一步，也是及其重要的一步。很多人都有这样的体会：命名是写代码中最让程序员头疼的事情之一，尤其是对母语非英语的开发人员来说，要找一个合适贴切的名字并不容易。提高自己命名的能力，可以多看看别人的代码。下面是 CSS 中的一些命名相关的建议：</p>
+<p><img src="/2017/11/27/CSS代码重构与优化/CSS命名.png" alt="CSS命名"></p>
+<p><strong>2、提取重复样式</strong><br>这一个方法很容易理解，简单说就是提取相同的样式成为一个单独的类再引用，这样不仅可以精简 CSS 文件大小，而且 CSS 代码变少，更易于重用和维护。</p>
+<p>提取公用的部分，然后在页面上分别引用 column-title 和 about 等，这样代码更简洁，维护起来也更方便了。这个例子非常简单，实际上项目中可能有更复杂的情况，尽可能的提取重复的东西。</p>
+<p><strong>3、书写顺序</strong><br>这个书写顺序指的是各个样式的书写顺序，下面是推荐的 CSS 书写顺序:</p>
+<p><img src="/2017/11/27/CSS代码重构与优化/CSS书写顺序.png" alt="CSS书写顺序"></p>
+<p>书写顺序不一定非得按照上面的推荐来进行，而是根据你自己的习惯，但是最好能保证前后的习惯一致的，或者团队应该有一个共同的代码规范去遵守，这样后期维护起来也会方便许多。</p>
+
+        <div class="article-date">
+            2017-11-27
+        </div>
+</div>
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+                                <div class="scroll-top">
+    <span class="arrow-icon"></span>
+</div>
+                                    <div class="footer">
+    <div class="content container">
+        <p>Y-Hui Blog Theme Design by: Y-Hui.</p>
+    </div>
+</div>
+                                        <script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/common.js"></script>
+    </body>
+
+</html>
